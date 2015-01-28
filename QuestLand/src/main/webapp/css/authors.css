@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+.txt_main_menu {
+	font-family: 'Hobo', Arial, Helvetica, sans-serif;
+	line-height: 170%; 
+	font-size: 30px; 
+	text-align: center; 
+	vertical-align: middle; 
+	color: #265bff;
+}
+
+.main_menu_block {
+	height: 100%; 
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black; 
+	background-color: #fff;
+}
+
+.txt_auth_menu {
+	font-family: 'Hobo', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	text-align: center;
+	color: #265aff;
+	line-height: 100%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.auth_menu_block {
+	width: 100%;
+	height: 90%;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	height: 75px;
+}
+
+.Txt_qland {
+	font-family: 'Hobo Std', Arial, Helvetica, sans-serif;
+	font-size: 450%;
+	text-align: center;
+	text-shadow: 10px 2px 3px black;
+	color: #fff;
+	line-height: 90%;
+	height: 100%;
+	width: 20%;
+	padding-left: 40%;
+}
+
+.Txt_rules {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	text-align: center; 
+	font-size: 280%;
+	color: #2659ff;
+	line-height: 180%;
+}
+
+.Txt_auth_list {
+	font-family: 'Hobo Std', Arial, Helvetica, sans-serif;
+	font-size: 200%;
+	text-align: left;
+	color: #2659ff;
+	line-height: 120%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 5%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: #265aff;
+}
+
+a:hover {
+	color: #0000b2;
+}

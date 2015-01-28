@@ -1,0 +1,310 @@
+﻿@charset "utf-8";
+
+body {
+	background-color: #2659ff;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+body * {
+	font-size: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+p {
+	margin-bottom: 1.1em;
+	margin-top: 0;
+}
+#main p.lastNode {
+	margin-bottom: 0;
+}
+a:link img, a:visited img {
+	border: none;
+}
+div.clearFloat {
+	clear: both;
+	font-size: 0;
+	height: 0;
+	line-height: 0px;
+}
+li.clearFloat {
+	clear: both;
+}
+ul.symbolList {
+	display: inline;
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.AbsWrap {
+	position: relative;
+	width: 100%;
+}
+.rowWrap {
+	width: 100%;
+}
+#main {
+	margin: 0 auto 0 0;
+	width: 1500px;
+	height: 1800px;
+}
+#Div {
+	left: 435px;
+	position: absolute;
+	top: 50px;
+	margin-bottom: 0;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	width: 200px;
+	padding-top: 0px;
+	height: 49px;
+}
+html > body #Div {
+	height: auto;
+	min-height: 50px;
+}
+#Div2 {
+	left: 225px;
+	position: absolute;
+	top: 50px;
+	margin-bottom: 0;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	width: 200px;
+	padding-top: 0px;
+	height: 49px;
+}
+html > body #Div2 {
+	height: auto;
+	min-height: 50px;
+}
+#Div3 {
+	left: 1074px;
+	position: absolute;
+	top: 50px;
+	margin-bottom: 0;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	width: 200px;
+	padding-top: 0px;
+	height: 49px;
+}
+html > body #Div3 {
+	height: auto;
+	min-height: 50px;
+}
+#Div4 {
+	left: 864px;
+	position: absolute;
+	top: 50px;
+	margin-bottom: 0;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	width: 200px;
+	padding-top: 0px;
+	height: 49px;
+}
+html > body #Div4 {
+	height: auto;
+	min-height: 50px;
+}
+#Div5 {
+	left: 645px;
+	position: absolute;
+	top: 50px;
+	margin-bottom: 0;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	width: 210px;
+	padding-top: 0px;
+	height: 49px;
+}
+html > body #Div5 {
+	height: auto;
+	min-height: 50px;
+}
+.Txt_Главная {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 350%;
+	text-align: left;
+	color: #265bff;
+	line-height: 120%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 264px;
+	position: absolute;
+	top: 54px;
+	margin-bottom: 0;
+}
+.Txt_Популярное {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 350%;
+	text-align: left;
+	color: #2659ff;
+	line-height: 120%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 656px;
+	position: absolute;
+	top: 54px;
+	margin-bottom: 0;
+}
+.Txt_Правила {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 350%;
+	text-align: left;
+	color: #2659ff;
+	line-height: 120%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 1108px;
+	position: absolute;
+	top: 54px;
+	margin-bottom: 0;
+}
+.Txt_Авторы {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 350%;
+	text-align: left;
+	color: #2659ff;
+	line-height: 120%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 904px;
+	position: absolute;
+	top: 54px;
+	margin-bottom: 0;
+}
+.Txt_Квесты {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 350%;
+	text-align: left;
+	color: #265aff;
+	line-height: 120%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 479px;
+	position: absolute;
+	top: 55px;
+	margin-bottom: 0;
+}
+#Div6 {
+	left: 225px;
+	position: absolute;
+	top: 150px;
+	margin-bottom: 0;
+ 	border-radius: 50px;
+	box-shadow: -10px 10px 50px 15px black;
+	background-color: #fff;
+	width: 1050px;
+	padding-top: 0px;
+	height: 499px;
+}
+html > body #Div6 {
+	height: auto;
+	min-height: 500px;
+}
+#Pict {
+	position: absolute;
+	left: 1360px;
+	top: 50px;
+	margin-bottom: 0;
+	background-image: url(author_small.png);
+	background-color: #fff;
+	width: 100px;
+	padding-top: 0px;
+	box-align: center;
+}
+html > body #Pict {
+	height: auto;
+	min-height: 100px;
+}
+.Txt_QuestLand {
+	font-family: 'Hobo Std', Arial, Helvetica, sans-serif;
+	font-size: 700%;
+	text-align: center;
+	text-shadow: 10px 2px 3px black;
+	color: #fff;
+	line-height: 100%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 65px;
+	top: 50px;
+	position: absolute;
+	margin-bottom: 0;
+	width: 1em;
+}
+.Txt_Myname {
+	font-family: 'Hobo Std', Arial, Helvetica, sans-serif;
+	font-size: 360%;
+	text-align: center;
+	color: #fff;
+	text-shadow: 5px 2px 3px black;
+	line-height: 100%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 1310px;
+	top: 150px;
+	position: absolute;
+	margin-top: 10px;
+	width: 200px;
+}
+#Create {
+	left: 1310px;
+	top: 220px;
+	position: absolute;
+	margin-bottom: 0;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	padding-top: 0px;
+	width: 200px;
+	height: 100px;
+}
+.Txt_Create {
+	font-family: 'Hobo', Arial, Helvetica, sans-serif;
+	font-size: 360%;
+	text-align: center;
+	color: #265aff;
+	line-height: 100%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 1310px;
+	top: 220px;
+	position: absolute;
+	margin-top: 10px;
+	width: 200px;
+}
+#Watch {
+	left: 1310px;
+	top: 350px;
+	position: absolute;
+	margin-bottom: 0;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	padding-top: 0px;
+	width: 200px;
+	height: 100px;
+}
+.Txt_Watch {
+	font-family: 'Hobo', Arial, Helvetica, sans-serif;
+	font-size: 360%;
+	text-align: center;
+	color: #265aff;
+	line-height: 100%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	left: 1310px;
+	top: 350px;
+	position: absolute;
+	margin-top: 10px;
+	width: 200px;
+}

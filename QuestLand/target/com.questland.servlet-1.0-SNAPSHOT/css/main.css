@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.txt_main_menu {
+	font-family: 'Hobo', Arial, Helvetica, sans-serif;
+	line-height: 170%;
+	font-size: 30px;
+	text-align: center;
+	vertical-align: middle;
+	color: #265bff;
+}
+
+.main_menu_block {
+	height: 100%;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+}
+
+.txt_auth_menu {
+	font-family: 'Hobo', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	text-align: center;
+	color: #265aff;
+	line-height: 100%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.auth_menu_block {
+	width: 100%;
+	height: 90%;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	height: 75px;
+}
+
+.main_pict {
+	max-width: 270px;
+	max-height: 220px;
+}
+
+.Txt_univ {
+	height: 100%; 
+	width: 30%; 
+	font-size: 220%; 
+	line-height: 75%; 
+	color: #fff;
+	margin-left: 29%;
+	text-align: center;
+	padding-top: 15%;
+}
+
+.Txt_quest {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 300%;
+	text-align: left;
+	color: #33f;
+	text-shadow: -2px 2px 2px black;
+	line-height: 100%;
+	padding-bottom: 2px;
+	padding-top: 1%;
+	padding-left: 2%;
+}
+.Txt_quest_author {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 130%;
+	text-align: left;
+	color: #33f;
+	line-height: 100%;
+	margin-top: -2%;
+	padding-left: 2%;
+}
+
+.arrow_right {
+	width: 0px;
+	height: 0px;
+  	border: 50px solid transparent;
+  	border-left-color: white;  
+  	border-right: 0;
+}
+.arrow_left {
+	width: 0px;
+	height: 0px;
+  	border: 50px solid transparent;
+  	border-right-color: white;  
+	border-left: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: #265aff;
+}
+
+a:hover {
+	color: #0000b2;
+}

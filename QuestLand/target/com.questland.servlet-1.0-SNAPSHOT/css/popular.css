@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+.txt_main_menu {
+	font-family: 'Hobo', Arial, Helvetica, sans-serif;
+	line-height: 170%; 
+	font-size: 30px; 
+	text-align: center; 
+	vertical-align: middle; 
+	color: #265bff;
+}
+
+.main_menu_block {
+	height: 100%; 
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black; 
+	background-color: #fff;
+}
+
+.txt_auth_menu {
+	font-family: 'Hobo', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	text-align: center;
+	color: #265aff;
+	line-height: 100%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.auth_menu_block {
+	width: 100%;
+	height: 90%;
+	border-radius: 30px;
+	box-shadow: -7px 10px 5px black;
+	background-color: #fff;
+	height: 75px;
+}
+
+.main_pict {
+	max-width: 270px;
+	max-height: 220px;
+}
+
+.Txt_univ {
+	height: 100%; 
+	width: 30%; 
+	font-size: 220%; 
+	line-height: 70%; 
+	color: #fff;
+	margin-left: 29%;
+	text-align: center;
+	padding-top: 15%;
+}
+
+.Txt_quest {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 300%;
+	text-align: left;
+	color: #33f;
+	text-shadow: -2px 2px 2px black;
+	line-height: 100%;
+	padding-bottom: 2px;
+	padding-top: 1%;
+	padding-left: 2%;
+}
+.Txt_quest_author {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	font-size: 150%;
+	text-align: left;
+	color: #33f;
+	line-height: 120%;
+	margin-top: -2%;
+	padding-left: 2%;
+}
+
+.Txt_qland {
+	font-family: 'Hobo Std', Arial, Helvetica, sans-serif;
+	font-size: 450%;
+	text-align: center;
+	text-shadow: 10px 2px 3px black;
+	color: #fff;
+	line-height: 90%;
+	height: 100%;
+	width: 20%;
+	padding-left: 40%;
+}
+
+.quest_block {
+	height: 243px; 
+	border-radius: 30px; 
+	box-shadow: -10px 10px 50px 15px black; 
+	background-color: #fff;
+}
+
+.quest_univ {
+	height: 270px;  
+	border-radius: 40px; 
+	margin-left: -7px; 
+	margin-top: -15px;
+}
+
+.auth_big_block {
+	border-radius: 50px; 
+	box-shadow: -10px 10px 50px 15px black; 
+	background-color: #fff; 
+	height: 500px;
+}
+
+.sto_sto {
+	height: 100%; 
+	width: 100%;
+}
+
+.Txt_popular {
+	font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+	text-align: center; 
+	vertical-align: middle;
+	font-size: 50px;
+	line-height: 50px;
+	color: #2659ff;
+	padding-bottom: -1%;
+	padding-top: 1%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: #265aff;
+}
+
+a:hover {
+	color: #0000b2;
+}

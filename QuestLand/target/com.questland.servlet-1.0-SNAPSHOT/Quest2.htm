@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>QLand</title>
+	<link rel="stylesheet" type="text/css" href="/css/quest.css" media="all" />
+	<script src="/js/jquery-1.11.2.min.js"></script>
+	<!--[if IE]>
+	<style type="text/css" media="all">.borderitem {border-style: solid;}</style>
+	<![endif]-->
+</head>
+
+<body id="bodyID">
+<div id="main">
+	<div id="Div">
+	</div>
+	<div id="Div2">
+	</div>
+	<div id="Div3">
+	</div>
+	<div id="Div4">
+	</div>
+	<div id="Div5">
+	</div>
+	<div class="Txt_Главная">
+	
+		<p class="lastNode"><a href="/Main.htm">Главная</a>
+		</p>
+	</div>
+	<div class="Txt_Популярное">
+	
+		<p class="lastNode">Популярное
+		</p>
+	</div>
+	<div class="Txt_Правила">
+	
+		<p class="lastNode"><a href="/Rules.htm">Правила</a>
+		</p>
+	</div>
+	<div class="Txt_Авторы">
+	
+		<p class="lastNode">Авторы
+		</p>
+	</div>
+	<div class="Txt_Квесты">
+	
+		<p class="lastNode">Квесты
+		</p>
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Div6">
+	</div>
+	<div class="Txt_QName">
+	
+		<p id="questName" class="lastNode">It Is Fantastic Quest!!!!!!!!!!!!!!!!!!!!!
+		</p>
+	</div>
+	<div id="questRate" class="Txt_QMark">+10</div>
+	<div class="Txt_QLike">&hearts;</div>
+	<div class="Txt_QDislike">&hearts;</div>
+	<div class="Txt_QAuthor">
+	
+		<p id="authorName" class="lastNode">Автор: Shersh
+		</p>
+	</div>
+	<div class="Txt_QDescr">
+	
+		<p id="questDescription" class="lastNode">Вселенная: Фантастика<br />Категория: Фильмы<br />Жанр: Повседневность, Юмор, Драма<br />Описание: Мир высоких технологий. Роботы, космические корабли, искусственный интеллект ждут вас.
+		</p>
+	</div>
+	<img id="QuestPict" src = "/images/quest/img_quest2.png" alt = "quest picture">
+
+	<div>
+		<div class="clearFloat"></div>
+		<img id="APict" src = "/images/author/author1.png" alt = "author picture">
+		<div class="Txt_Myname">
+
+			<p class="lastNode">Rozettka
+			</p>
+		</div>
+		<div id="Create">
+		</div>
+		<div class="Txt_Create">
+
+			<p class="lastNode">Создать <br/> квест
+			</p>
+		</div>
+		<div id="Watch">
+		</div>
+		<div class="Txt_Watch">
+
+			<p class="lastNode">Мои <br/> квесты
+			</p>
+		</div>
+		<div id="Start" onclick="startQuest()">
+		</div>
+		<div class="Txt_Start">
+
+			<p class="lastNode" onclick="startQuest()">Начать <br/> квест
+			</p>
+		</div>
+		<div id="Show">
+		</div>
+		<div class="Txt_Show">
+
+			<p class="lastNode">Показать <br/> отзывы
+			</p>
+		</div>
+		<div class="Txt_QuestLand">
+
+			<p class="lastNode">Q u e s t L a n d
+			</p>
+		</div>
+		<div class="clearFloat"></div>
+	</div>
+
+</div>
+
+<script>
+	(function init() {
+		$.ajax({
+			type: "POST",
+			url: '/quest',
+			dataType: 'json',
+			data: { type: 'id', value: url2id() }
+		}).done(function(data) {
+			console.log(data);
+			var quest = JSON.parse(JSON.stringify(data));
+			//console.log(jsonMainQuests);
+			initQuest(quest);
+		});
+	})();
+
+	function initQuest(quest) {
+		document.getElementById("questName").innerHTML = quest.name;
+		var rate = quest.rateLike - quest.rateDislike;
+		document.getElementById("questRate").innerHTML = (rate > 0 ? '+' : '') + rate;
+		document.getElementById("authorName").innerHTML = quest.author;
+		document.getElementById("questDescription").innerHTML
+				= "Вселенная: " + quest.universe + "<br>"
+				+ "Категория: " + quest.category + "<br>"
+				+ "Жанр: " + quest.genre
+				+ (("characters" in quest) ? ("<br>" + "Персонажи: " + quest.characters) : "")
+				+ (("description" in quest) ? ("<br>" + "Описание: " + quest.description) : "");
+		document.getElementById("QuestPict").setAttribute("src", "/images/quest/" + quest.imageURL);
+
+		var fons = ["fon_fanz.png", "fon_fant.png", "fon_real.png", "fon_alter.png"];
+		document.getElementById("bodyID").setAttribute("background", "/images/" + fons[quest.universeID - 1]);
+	}
+
+	function url2id() {
+		var url = window.location.href.toString();
+		var pos = url.lastIndexOf('/');
+		console.log(url.substring(pos + 1));
+		return url.substring(pos + 1);
+	}
+
+	function startQuest() {
+		window.location =  window.location.protocol + "//" + window.location.host + "/questgo/" + url2id();
+	}
+</script>
+
+</body>
+</html>

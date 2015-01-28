@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>QLand</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
+	<script src="/js/jquery-1.11.2.min.js"></script>
+	<!--[if IE]>
+	<style type="text/css" media="all">.borderitem {border-style: solid;}</style>
+	<![endif]-->
+</head>
+
+<body>
+
+<div id="main">
+	<div id="Div">
+	</div>
+	<div id="Div2">
+	</div>
+	<div id="Div3">
+	</div>
+	<div id="Div4">
+	</div>
+	<div id="Div5">
+	</div>
+	<div class="Txt_Главная">
+	
+		<p class="lastNode"><a href="/Main.htm">Главная</a>
+		</p>
+	</div>
+	<div class="Txt_Популярное">
+	
+		<p class="lastNode">Популярное
+		</p>
+	</div>
+	<div class="Txt_Правила">
+	
+		<p class="lastNode"><a href="/Rules.htm">Правила</a>
+		</p>
+	</div>
+	<div class="Txt_Авторы">
+	
+		<p class="lastNode">Авторы
+		</p>
+	</div>
+	<div class="Txt_Квесты">
+	
+		<p class="lastNode">Квесты
+		</p>
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Div6">
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Pict">
+	</div>
+	<div class="Txt_QuestLand">
+	
+		<p class="lastNode">QuestLand
+		</p>
+	</div>
+	<div class="Txt_Здесь">
+	
+		<p class="lastNode">Здесь авторы могут создавать <br />новые миры, а читатели - <br />погружаться в них!
+	</p>
+	</div>
+	<form class="Form" action="/login" method="post">
+			<div class="Txt_Form">Логин:  
+			</div>
+			<input type="text" name="login" style="width:150px; height:15px;"> </br>
+			<div class="Txt_Form">Пароль:  
+			</div>
+			<input type="password" name="passwd" style="width:150px; height:15px;"></br>
+			<input type="submit" name="submit" value="Sign in" style="width:70px; height:30px; margin-top:10px; font-size: 190%; color: #2659ff; background-color: #fff;">
+			<input type="button" name="reg" value="Sign up" style="width:73px; height:30px; margin-top:10px; margin-left:10px; font-size: 190%; color: #2659ff; background-color: #fff;" disabled>
+	</form>
+	<div class="clearFloat"></div>
+	<div id="Div7">
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Fs">
+	</div>
+	<img id="fantz" src="images/img_quest1.png" alt="quest1 image"/>
+	<div class="Txt_Фэнтези">
+	
+		<p class="lastNode">Ф э н т е з и
+		</p>
+	</div>
+	<div class="Txt_Квест">
+	
+		<p id="quest1name" class="lastNode">Квест 1
+		</p>
+	</div>
+	<div class="Txt_Автор">
+	
+		<p id="quest1body" class="lastNode">Автор: Некто1<br />Вселенная: Фэнтези<br />Категория: Ориджиналы<br />Жанр: Повседневность, Юмор, Романтика<br />Описание: Путешествие по стране эльфов.
+		</p>
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Div8">
+	</div>
+	<div class="arrow_rfz" onclick="switchQuest(1, 1)">
+	</div>
+	<div class="arrow_lfz" onclick="switchQuest(1, -1)">
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Ft">
+	</div>
+	<img id="fantc" src="images/img_quest2.png" alt="quest1 image"/>
+	<div class="Txt_Фантастика">
+	
+		<p class="lastNode">Ф а н т а с т и к а
+		</p>
+	</div>
+	<div class="Txt_Квест2">
+	
+		<p id="quest2name" class="lastNode">Квест 2
+		</p>
+	</div>
+	<div class="Txt_Автор2">
+	
+		<p id="quest2body" class="lastNode">Автор: Некто2<br />Вселенная: Фантастика<br />Категория: Фильмы<br />Жанр: Повседневность, Юмор, Драма<br />Описание: Мир высоких технологий.
+		</p>
+	</div>
+	<div class="arrow_rfc">
+	</div>
+	<div class="arrow_lfc">
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Div9">
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Rel">
+	</div>
+	<img id="real" src="images/img_quest3.png" alt="quest1 image"/>
+	<div class="Txt_Реалити">
+	
+		<p class="lastNode">Р е а л и т и
+		</p>
+	</div>
+	<div class="Txt_Квест3">
+	
+		<p id="quest3name" class="lastNode">Квест 3
+		</p>
+	</div>
+	<div class="Txt_Автор3">
+	
+		<p id="quest3body" class="lastNode">Автор: Некто3<br />Вселенная: Реалити<br />Категория: Ориджиналы<br />Жанр: Повседневность, Психология, Драма<br />Описание: Жизнь в современном мире.
+		</p>
+	</div>
+	<div class="arrow_rre">
+	</div>
+	<div class="arrow_lre">
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Div10">
+	</div>
+	<div class="clearFloat"></div>
+	<div id="Anth">
+	</div>
+	<img id="alter" src="images/img_quest4.png" alt="quest1 image"/>
+	<div class="Txt_Иное">
+	
+		<p class="lastNode">И н о е
+		</p>
+	</div>
+	<div class="Txt_Квест4">
+	
+		<p id="quest4name" class="lastNode">Квест 4
+		</p>
+	</div>
+	<div class="Txt_Автор4">
+	
+		<p id="quest4body" class="lastNode">Автор: Некто4<br />Вселенная: Иное<br />Категория: Аниме<br />Жанр: Детектив, Юмор, Мистика<br />Описание: Монстры не дремлют.
+		</p>
+	</div>
+	<div class="arrow_ran">
+	</div>
+	<div class="arrow_lan">
+	</div>
+	<div class="clearFloat"></div>
+</div>
+
+<script>
+	var authorLogin;
+	var jsonMainQuests;
+	var questIndices = [0, 0, 0, 0];
+
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1);
+			if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+		}
+		return "";
+	}
+
+	function validateLogin() {
+		var login = getCookie("login");
+		if (login != "") {
+			$.ajax({
+				type: 'POST',
+				url: '/login',
+				dataType: 'json',
+				data: { type: 'author', value: login }
+			}).done(function(data) {
+				authorLogin = JSON.parse(JSON.stringify(data));
+				console.log(authorLogin);
+			});
+		}
+	}
+
+	(function() {
+		$.ajax({
+			type: "POST",
+			url: '/main',
+			data: { type: 'init' }
+		}).done(function(data) {
+			console.log(data);
+			jsonMainQuests = JSON.parse(data);
+			//console.log(jsonMainQuests);
+			initAllQuests();
+			validateLogin();
+		});
+	})();
+
+	function initAllQuests() {
+		for (var i = 0; i < 4; i++) {
+			var quest = jsonMainQuests[i + 1][questIndices[i]];
+			var qid = "quest" + (i + 1);
+
+			var questHref = document.createElement('a');
+			questHref.href = window.location.protocol + "//" + window.location.host + "/quest/" + quest.id;
+			questHref.innerHTML = quest.name;
+
+			var authorHref = document.createElement('a');
+			authorHref.href = window.location.protocol + "//" + window.location.host + "/author/" + quest.authorID;
+			authorHref.innerHTML = quest.author;
+
+			var questNameObj = document.getElementById(qid + "name");
+			questNameObj.replaceChild(questHref, questNameObj.firstChild);
+
+			document.getElementById(qid + "body").innerHTML
+					= "Автор: " + authorHref.outerHTML + "<br>"
+			+ "Категория: " + quest.category + "<br>"
+			+ "Жанр: " + quest.genre
+			+ (("description" in quest) ? ("<br>" + "Описание: " + ellipsize(quest.description)) : "");
+
+			if (!quest.imageURL) {
+				continue;
+			}
+
+			var universes = ["fantz", "fantc", "real", "alter"];
+			document.getElementById(universes[quest.universeID - 1])
+					.setAttribute("src", "/images/quest/" + quest.imageURL);
+		}
+	}
+
+	function ellipsize(s) {
+		if (s.length > 86) {
+			return s.substring(0, 86) + "...";
+		}
+		return s;
+	}
+
+	function switchQuest(num, dir) {
+		console.log(num + ", " + dir);
+		console.log("before: " + questIndices[num - 1]);
+		var maxQuests = Math.min(5, jsonMainQuests[num].length);
+		questIndices[num - 1] += maxQuests + dir;
+		questIndices[num - 1] %= maxQuests;
+		console.log("after: " + questIndices[num - 1]);
+		initAllQuests();
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; margin:0px; padding:0px;">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>QLand</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
+	<script src="/js/jquery-1.11.2.min.js"></script>
+	<script src="/js/utils.js"></script>
+	<!--[if IE]>
+	<style type="text/css" media="all">.borderitem {border-style: solid;}</style>
+	<![endif]-->
+</head>
+
+<body bgcolor="#2659ff" style="height: 100%; margin:0px; padding:0px;">
+	<table style="width: 100%; height: 30%; text-align: center; align: center;">
+		<tr>
+			<td style="width: 15%;">
+			</td>
+			<td style="width: 70%; height: 40px;">
+				<table style="width: 100%; height: 100%; text-align: center; padding-top: 1%;">
+					<tr style="height: 100%;">
+						<td style="position: relative; width: 20%; text-align: center; vertical-align: middle;">
+							<div class="main_menu_block">
+								<div class="txt_main_menu">
+									<a href="/Main.htm">Главная</a>
+								</div>
+							</div>
+						</td>
+						<td style="position: relative; width: 20%; text-align: center; vertical-align: middle;">
+							<div class="main_menu_block">
+								<div class="txt_main_menu">
+									Квесты
+								</div>
+							</div>
+						</td>
+						<td style="position: relative; width: 22%; text-align: center; vertical-align: middle;">
+							<div class="main_menu_block">
+								<div class="txt_main_menu">
+									<a href="/Popular.htm">Популярное</a>
+								</div>
+							</div>
+						</td>
+						<td style="position: relative; width: 18%; text-align: center; vertical-align: middle;">
+							<div class="main_menu_block">
+								<div class="txt_main_menu">
+									<a href="/Authors.htm">Авторы</a>
+								</div>
+							</div>
+						</td>
+						<td style="position: relative; width: 20%; text-align: center; vertical-align: middle;">
+							<div class="main_menu_block">
+								<div class="txt_main_menu">
+									<a href="/Rules.htm">Правила</a>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 15%;">
+			</td>
+		</tr>
+		<tr style="height: 500px;">
+			<td style="width: 15%;">
+			</td>
+			<td style="width: 70%; height: 500px;">
+				<div style="border-radius: 50px; box-shadow: -10px 10px 50px 15px black; background-color: #fff; height: 500px;">
+					<table style="width: 100%; text-align: center; margin-top: 2%; height: 500px;">
+						<tr>
+							<td style="width: 55%; height: 100px;">
+								<div style="font-family: 'Hobo Std', Arial, Helvetica, sans-serif; font-size: 100px; text-align: center; text-shadow: 10px 2px 3px black; color: #2659ff; line-height: 100px;
+										padding-bottom: 2px; padding-top: 1px;">
+										QuestLand
+								</div>
+							</td>
+							<td rowspan="3" style="width: 45%; height: 500px; text-align: right; vertical-align: top;">
+								<div style="height: 100%;">
+									<img src="images/upperpict.png" alt="main pict" style="position: relative; max-height: 100%; max-width: 100%; height: auto; width: auto; margin-right: -3px; margin-top: -3px;"/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td style="height: 100px;">
+								<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 200%; text-align: left; color: #2659ff; line-height: 120%; margin-left: 5%;">
+									Здесь авторы могут создавать новые миры, а читатели - погружаться в них!
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: left; height: 200px; vertical-align: top;">
+								<form id="loginForm" style="margin-left: 5%;" action="/login" method="post">
+									<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff;">
+										Логин:  
+									</div>
+									<input type="text" name="login" style="width: 43%; height: 25px;"> </br>
+									<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff;">
+										Пароль:  
+									</div>
+									<input type="hidden" name="type" value="login">
+									<input type="password" name="passwd" style="width: 43%; height: 25px;"></br>
+									<input type="submit" name="submit" value="Sign in" style="width: 20%; height: 35px; margin-top: 3%; font-size: 22px; color: #2659ff; background-color: #fff;">
+									<input type="button" name="reg" value="Sign up" onclick="floatReg()" style="width: 20%; height: 35px; margin-top: 3%; margin-left: 3%; font-size: 22px; color: #2659ff; background-color: #fff;">
+								</form>								
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width: 15%; text-align: center; vertical-align: top;">
+				<table style="height: 510px; width: 80%; margin-left: 10%;">
+					<tr>
+						<td style="height: 22%; width: 100%; text-align: center;">
+							<div id="authorImgBox" style="display:none">
+								<img id="authorImg" src="images/author.png" alt="author pict" style="position: relative; max-height: 100px; max-width: 100px; height: auto; width: auto;"/>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 10%;">
+							<div id="authorName" style="font-family: 'Hobo Std', Arial, Helvetica, sans-serif; font-size: 200%;	text-align: center;	color: #fff; text-shadow: 5px 2px 3px black;
+									line-height: 100%; padding-bottom: 2px; padding-top: 1px; display:none">
+								Rozettka
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 17%;">
+							<div id="crQuest" class="auth_menu_block" style="display:none">
+								<div class="txt_auth_menu">
+									Создать <br> квест
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 17%;">
+							<div id="logoutUser" onclick="exitUser()" class="auth_menu_block" style="display:none">
+								<div class="txt_auth_menu" style="padding-top: 15%;">
+									Выйти
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 17%;">
+							<div class="auth_menu_block" style="display:none">
+								<div class="txt_auth_menu">
+									Начать <br> квест
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 17%;">
+							<div class="auth_menu_block" style="display:none">
+								<div class="txt_auth_menu">
+									Открыть <br> отзывы
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table style="width: 100%; margin-top: 4%;">
+		<tr style="height: 22%;">
+			<td style="width: 15%; height: 270px; direction: rtl; text-align: start; padding-right: 3%;">
+				<div class="arrow_left" onclick="switchQuest(1, -1)">
+				</div>
+			</td>
+			<td style="width: 70%; height: 270px;">
+				<div style="height: 90%; border-radius: 30px; box-shadow: -10px 10px 50px 15px black; background-color: #fff;">
+					<table style="height: 270px; width: 100%;">
+						<tr style="height: 100%; width: 100%;">
+							<td style="width: 6%; font-size: 90%; line-height: 100%;">
+								<div style="height: 270px;  border-radius: 40px; background-color: #00b200; margin-left: -7px; margin-top: -15px;">
+									<div class="Txt_univ">
+										Ф э н т е з и
+									</div>
+								</div>
+							</td>
+							<td style="width: 30%; text-align: center;">
+								<img id="img1" class="main_pict" src="images/img_quest1.png" alt="quest image"/>
+							</td>
+							<td style="vertical-align: top;">
+								<div id="quest1name" class="Txt_quest">
+									Квест1
+								</div>
+								<br>
+								<div id="quest1body" class="Txt_quest_author">
+									Автор: Некто1<br />Вселенная: Фэнтези<br>Категория: Ориджиналы<br>Жанр: Повседневность, Юмор, Романтика<br>Описание: Путешествие по стране эльфов.
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width: 15%; height: 270px; text-align: left; padding-left: 3%;">
+				<div class="arrow_right" onclick="switchQuest(1, 1)">
+				</div>
+			</td>
+		</tr>
+		<tr style="height: 22%;">
+			<td style="width: 15%; height: 270px; direction: rtl; text-align: start; padding-right: 3%;">
+				<div class="arrow_left" onclick="switchQuest(2, -1)">
+				</div>
+			</td>
+			<td style="width: 70%; height: 270px;">
+				<div style="height: 90%; border-radius: 30px; box-shadow: -10px 10px 50px 15px black; background-color: #fff;">
+					<table style="height: 100%; width: 100%;">
+						<tr style="height: 100%; width: 100%;">
+							<td style="width: 6%; font-size: 90%; line-height: 100%;">
+								<div style="height: 270px;  border-radius: 40px; background-color: #0000b2; margin-left: -7px; margin-top: -15px;">
+									<div class="Txt_univ">
+										Ф а н т а с т и к а
+									</div>
+								</div>
+							</td>
+							<td style="width: 30%; text-align: center;">
+								<img id="img2" class="main_pict" src="images/img_quest2.png" alt="quest image"/>
+							</td>
+							<td style="vertical-align: top;">
+								<div id="quest2name" class="Txt_quest">
+									Квест1
+								</div>
+								<br>
+								<div id="quest2body" class="Txt_quest_author">
+									Автор: Некто1<br />Вселенная: Фэнтези<br>Категория: Ориджиналы<br>Жанр: Повседневность, Юмор, Романтика<br>Описание: Путешествие по стране эльфов.
+									</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width: 15%; height: 270px; text-align: left; padding-left: 3%;">
+				<div class="arrow_right" onclick="switchQuest(2, 1)">
+				</div>
+			</td>
+		</tr><tr style="height: 22%;">
+			<td style="width: 15%; height: 270px; direction: rtl; text-align: start; padding-right: 3%;">
+				<div class="arrow_left" onclick="switchQuest(3, -1)">
+				</div>
+			</td>
+			<td style="width: 70%; height: 270px;">
+				<div style="height: 90%; border-radius: 30px; box-shadow: -10px 10px 50px 15px black; background-color: #fff;">
+					<table style="height: 100%; width: 100%;">
+						<tr style="height: 100%; width: 100%;">
+							<td style="width: 6%; line-height: 100%;">
+								<div style="height: 270px; border-radius: 40px; background-color: #ff4d4d; margin-left: -7px; margin-top: -15px;">
+									<div class="Txt_univ">
+										Р е а л и т и
+									</div>
+								</div>
+							</td>
+							<td style="width: 30%; text-align: center;">
+								<img id="img3" class="main_pict" src="images/img_quest3.png" alt="quest image"/>
+							</td>
+							<td style="vertical-align: top;">
+								<div id="quest3name" class="Txt_quest">
+									Квест1
+								</div>
+								<br>
+								<div id="quest3body" class="Txt_quest_author">
+									Автор: Некто1<br />Вселенная: Фэнтези<br>Категория: Ориджиналы<br>Жанр: Повседневность, Юмор, Романтика<br>Описание: Путешествие по стране эльфов.
+									</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width: 15%; height: 270px; text-align: left; padding-left: 3%;">
+				<div class="arrow_right" onclick="switchQuest(3, 1)">
+				</div>
+			</td>
+		</tr><tr style="height: 22%;">
+			<td style="width: 15%; height: 270px; direction: rtl; text-align: start; padding-right: 3%;">
+				<div class="arrow_left" onclick="switchQuest(4, -1)">
+				</div>
+			</td>
+			<td style="width: 70%; height: 270px;">
+				<div style="height: 90%; border-radius: 30px; box-shadow: -10px 10px 50px 15px black; background-color: #fff;">
+					<table style="height: 100%; width: 100%;">
+						<tr style="height: 100%; width: 100%;">
+							<td style="width: 6%; font-size: 90%; line-height: 100%;">
+								<div style="height: 270px; border-radius: 40px; background-color: #a64dff; margin-left: -7px; margin-top: -15px;">
+									<div class="Txt_univ">
+										И н о е
+									</div>
+								</div>
+							</td>
+							<td style="width: 30%; text-align: center;">
+								<img id="img4" class="main_pict" src="images/img_quest4.png" alt="quest image"/>
+							</td>
+							<td style="vertical-align: top;">
+								<div id="quest4name" class="Txt_quest">
+									Квест1
+								</div>
+								<br>
+								<div id="quest4body" class="Txt_quest_author">
+									Автор: Некто1<br />Вселенная: Фэнтези<br>Категория: Ориджиналы<br>Жанр: Повседневность, Юмор, Романтика<br>Описание: Путешествие по стране эльфов.
+									</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td style="width: 15%; height: 270px; text-align: left; padding-left: 3%;">
+				<div class="arrow_right" onclick="switchQuest(4, 1)">
+				</div>
+			</td>
+		</tr>
+	</table>
+
+<script>
+	var jsonMainQuests;
+	var questIndices = [0, 0, 0, 0];
+
+	function initAllQuests() {
+		for (var i = 0; i < 4; i++) {
+			var quest = jsonMainQuests[i + 1][questIndices[i]];
+			var qid = "quest" + (i + 1);
+
+			var questHref = document.createElement('a');
+			questHref.href = window.location.protocol + "//" + window.location.host + "/quest/" + quest.id;
+			questHref.innerHTML = quest.name;
+
+			var authorHref = document.createElement('a');
+			authorHref.href = window.location.protocol + "//" + window.location.host + "/author/" + quest.authorID;
+			authorHref.innerHTML = quest.author;
+
+			var questNameObj = document.getElementById(qid + "name");
+			questNameObj.replaceChild(questHref, questNameObj.firstChild);
+
+			document.getElementById(qid + "body").innerHTML
+				= "Автор: " + authorHref.outerHTML + "<br>"
+				+ "Категория: " + quest.category + "<br>"
+				+ "Жанр: " + quest.genre
+				+ (("description" in quest) ? ("<br>" + "Описание: " + ellipsize(quest.description, 150)) : "");
+
+			var qImgID = "img" + (i + 1);
+			document.getElementById(qImgID)
+					.setAttribute("src", "/images/" + (quest.imageURL ? "quest/" + quest.imageURL : "none.png"));
+		}
+	}
+
+	(function() {
+		$.ajax({
+			type: "POST",
+			url: '/main',
+			dataType: 'json',
+			data: { type: 'init' }
+		}).done(function(data) {
+			console.log(data);
+			jsonMainQuests = data;
+			initAllQuests();
+			validateLogin({"loginForm": true});
+		});
+	})();
+
+	function switchQuest(num, dir) {
+		var maxQuests = Math.min(5, jsonMainQuests[num].length);
+		questIndices[num - 1] += maxQuests + dir;
+		questIndices[num - 1] %= maxQuests;
+		initAllQuests();
+	}
+
+	function floatReg() {
+		$("#darkFon").css("display", "block");
+		$("#floatDiv").css("display", "block");
+	}
+
+	function closeReg() {
+		$("#darkFon").css("display", "none");
+		$("#floatDiv").css("display", "none");
+	}
+
+	function sendReg() {
+		var pass = document.getElementById("regPass").value;
+		var repPass = document.getElementById("regRepPass").value;
+		if (pass != repPass) {
+			console.log("not equal passwords");
+			return;
+		}
+
+		var login = document.getElementById("regLogin").value;
+		var mail = document.getElementById("regMail").value;
+
+		if (!login || !mail || !pass || !repPass ||
+			!login.match(/^[A-Za-z_0-9]+$/g) ||
+			!pass.match(/^[A-Za-z_0-9]+$/g) ||
+			!mail.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/g))
+		{
+			console.log("login: " + login.match(/^[A-Za-z_0-9]+$/g));
+			console.log("pass: " + pass.match(/^[A-Za-z_0-9]+$/g));
+			console.log("wrong datas");
+			return;
+		}
+
+		$.ajax({
+			type: "POST",
+			url: '/register',
+			dataType: 'json',
+			data: { type: 'reg', name: login, passwd: pass, email: mail }
+		}).done(function(servResp) {
+			if (servResp.ok) {
+				console.log("ok reg");
+				closeReg();
+			} else {
+				console.log("not ok");
+			}
+		});
+	}
+</script>
+
+</body>
+
+<div id="darkFon" style="z-index: 100; width: 100%; height: 100%; background: #000; opacity: 0.6; position: fixed; top: 0; left: 0; display: none">
+</div>
+
+<div id="floatDiv" style="
+	width:30%;
+	height:auto;
+	background:#FFFFFF;
+	z-index:200;
+	position: fixed;
+	left: 35%;
+	top: 25%;
+	border: 5px solid #2659ff;
+	border-radius: 30px;
+	display: none"
+>
+	<div id="regForm" style="padding-left: 5%; padding-bottom: 5%;">
+		<input type="button" name="cross" onclick="closeReg()" style="width: 20px; height: 20px; background: #f00; border-radius: 10px; position: relative; top: 0px; left: 100%; margin-left: -30px; margin-top: 5%;">
+		<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff; margin-top: -5%;">
+			Почтовый ящик:
+		</div>
+		<input id="regMail" type="text" name="regMail" style="width: 43%; height: 25px;"> </br>
+		<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff;">
+			Логин:
+		</div>
+		<input id="regLogin" type="text" name="regLogin" style="width: 43%; height: 25px;"> </br>
+		<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff;">
+			Пароль:
+		</div>
+		<input id="regPass" type="password" name="regPasswd" style="width: 43%; height: 25px;"></br>
+		<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff;">
+			Повторить пароль:
+		</div>
+		<input id="regRepPass" type="password" name="regRepeatPasswd" style="width: 43%; height: 25px;"></br>
+		<input type="button" name="reg" onclick="sendReg()" value="Зарегистрироваться" style="width: 60%; height: 40px; margin-top: 5%; font-size: 22px; color: #2659ff; background-color: #fff;">
+	</div>
+</div>
+</html>
