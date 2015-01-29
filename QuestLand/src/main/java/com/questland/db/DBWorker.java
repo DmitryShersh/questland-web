@@ -280,13 +280,13 @@ public class DBWorker {
             ResultSet questLikes = psPLike.executeQuery();
 
             if (questLikes.next()) {
-                if (questLikes.getInt("val") == rate) return 0;
-
-                try (PreparedStatement psUpdate = connection.prepareStatement(UPDATE_LIKES)) {
-                    psUpdate.setInt(1, rate);
-                    psUpdate.setInt(2, qid);
-                    psUpdate.setInt(3, aid);
-                    psUpdate.executeUpdate();
+                if (questLikes.getInt("val") != rate) {
+                    try (PreparedStatement psUpdate = connection.prepareStatement(UPDATE_LIKES)) {
+                        psUpdate.setInt(1, rate);
+                        psUpdate.setInt(2, qid);
+                        psUpdate.setInt(3, aid);
+                        psUpdate.executeUpdate();
+                    }
                 }
             } else {
                 try (PreparedStatement psInsert = connection.prepareStatement(INSERT_LIKES)) {
