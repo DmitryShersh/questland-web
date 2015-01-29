@@ -28,7 +28,7 @@ function validateLogin(extraParams) {
             initUser();
         });
     } else {
-        if ("questGoExit" in extraParams) {
+        if (extraParams && "questGoExit" in extraParams) {
             window.location = window.location.protocol + "//" + window.location.host + "/quest/" + url2id();
         } else {
             clearUserWindows();

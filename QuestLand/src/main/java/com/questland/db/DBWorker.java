@@ -21,6 +21,12 @@ public class DBWorker {
         }
     }
 
+    private static final String GET_AUTHOR_BY_ID = "SELECT * FROM Authors WHERE id=?";
+    private static final String GET_UNIVERSE_BY_ID = "SELECT name FROM Universes WHERE id=?";
+    private static final String GET_CATEGORY_BY_ID = "SELECT name FROM Categories WHERE id=?";
+    private static final String GET_GENRES_BY_QID = "SELECT genre_id FROM QuestGenres WHERE quest_id=?";
+    private static final String GET_QUEST_LIKES = "SELECT val FROM Likes WHERE qid=?";
+
     private static Quest extractQuest(ResultSet quests, Connection connection) throws SQLException {
         int questID = quests.getInt("id");
         String name = quests.getString("name");
@@ -28,8 +34,9 @@ public class DBWorker {
         // getting author from another table
         String author = null;
         int authorID = quests.getInt("author_id");
-        try (Statement authorSt = connection.createStatement()) {
-            ResultSet authors = authorSt.executeQuery("SELECT login FROM Authors WHERE id=" + authorID + ";");
+        try (PreparedStatement psAuthor = connection.prepareStatement(GET_AUTHOR_BY_ID)) {
+            psAuthor.setInt(1, authorID);
+            ResultSet authors = psAuthor.executeQuery();
             while (authors.next()) {
                 author = authors.getString("login");
             }
@@ -38,8 +45,9 @@ public class DBWorker {
         //getting universe
         String universe = null;
         int universeID = quests.getInt("universe_id");
-        try (Statement categorySt = connection.createStatement()) {
-            ResultSet categories = categorySt.executeQuery("SELECT name FROM Universes WHERE id=" + universeID + ";");
+        try (PreparedStatement psUniverse = connection.prepareStatement(GET_UNIVERSE_BY_ID)) {
+            psUniverse.setInt(1, universeID);
+            ResultSet categories = psUniverse.executeQuery();
             while (categories.next()) {
                 universe = categories.getString("name");
             }
@@ -48,8 +56,9 @@ public class DBWorker {
         // getting category
         String category = null;
         int categoryID = quests.getInt("category_id");
-        try (Statement categorySt = connection.createStatement()) {
-            ResultSet categories = categorySt.executeQuery("SELECT name FROM Categories WHERE id=" + categoryID + ";");
+        try (PreparedStatement psCategory = connection.prepareStatement(GET_CATEGORY_BY_ID)) {
+            psCategory.setInt(1, categoryID);
+            ResultSet categories = psCategory.executeQuery();
             while (categories.next()) {
                 category = categories.getString("name");
             }
@@ -57,8 +66,9 @@ public class DBWorker {
 
         // getting genres
         String genres = null;
-        try (Statement questGenreSt = connection.createStatement()) {
-            ResultSet genresSet = questGenreSt.executeQuery("SELECT genre_id FROM QuestGenres WHERE quest_id=" + questID + ";");
+        try (PreparedStatement psGenres = connection.prepareStatement(GET_GENRES_BY_QID)) {
+            psGenres.setInt(1, questID);
+            ResultSet genresSet = psGenres.executeQuery();
 
             String genreQuery = "SELECT name FROM Genres WHERE ";
             List<String> genreIDS = new ArrayList<>();
@@ -80,20 +90,20 @@ public class DBWorker {
         String characters = quests.getString("characters");
         String description = quests.getString("description");
         String imageURL = quests.getString("img_url");
-        int rate = 0;
 
-        try (Statement questLikesSt = connection.createStatement()) {
-            ResultSet questLikes = questLikesSt.executeQuery("SELECT val FROM Likes WHERE qid=" + questID + ";");
-
+        int totalRate = 0;
+        try (PreparedStatement psTotal = connection.prepareStatement(GET_QUEST_LIKES)) {
+            psTotal.setInt(1, questID);
+            ResultSet questLikes = psTotal.executeQuery();
             while (questLikes.next()) {
-                rate += questLikes.getInt("val");
+                totalRate += questLikes.getInt("val");
             }
         }
 
         return new Quest(
             questID, name, authorID, author, universeID, universe,
             category, genres, characters,
-            description, imageURL, rate
+            description, imageURL, totalRate
         );
     }
 
@@ -105,16 +115,15 @@ public class DBWorker {
         return result;
     }
 
-    public static List<Quest> getTopQuests(int universeID) {
-        final String st1 = "SELECT * FROM Quests WHERE universe_id=";
-        final String st2 = " ORDER BY creation_date DESC LIMIT 5;";
+    private static final String LAST_MODIFIED_QUESTS = "SELECT * FROM Quests WHERE universe_id=? ORDER BY creation_date DESC LIMIT 5";
 
+    public static List<Quest> getTopQuests(int universeId) {
         List<Quest> result = null;
-
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement questSt = connection.createStatement())
+             PreparedStatement psOQuests = connection.prepareStatement(LAST_MODIFIED_QUESTS))
         {
-            ResultSet quests = questSt.executeQuery(st1 + universeID + st2);
+            psOQuests.setInt(1, universeId);
+            ResultSet quests = psOQuests.executeQuery();
             result = getAllQuests(quests, connection);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -126,9 +135,11 @@ public class DBWorker {
     public static Author getAuthorByID(int authorID) {
         Author author = null;
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement st = connection.createStatement()
+             PreparedStatement psAuthor = connection.prepareStatement(GET_AUTHOR_BY_ID)
         ) {
-            ResultSet authorSet = st.executeQuery("SELECT * FROM Authors WHERE id=" + authorID + ";");
+            psAuthor.setInt(1, authorID);
+            ResultSet authorSet = psAuthor.executeQuery();
+
             while (authorSet.next()) {
                 int id = authorSet.getInt("id");
                 String login = authorSet.getString("login");
@@ -146,12 +157,15 @@ public class DBWorker {
         return author;
     }
 
-    public static Quest getQuestByID(int questID) {
+    private static final String GET_QUEST_BY_ID = "SELECT * FROM Quests WHERE id=?";
+
+    public static Quest getQuestByID(int questId) {
         Quest quest = null;
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement st = connection.createStatement()
+             PreparedStatement psQuest = connection.prepareStatement(GET_QUEST_BY_ID)
         ) {
-            ResultSet quests = st.executeQuery("SELECT * FROM Quests WHERE id=" + questID + ";");
+            psQuest.setInt(1, questId);
+            ResultSet quests = psQuest.executeQuery();
             quests.next();
             quest = extractQuest(quests, connection);
         } catch (SQLException e) {
@@ -161,12 +175,15 @@ public class DBWorker {
         return quest;
     }
 
-    public static List<Quest> authorQuests(int authorID) {
+    private static final String GET_QUESTS_BY_AUTHOR = "SELECT * FROM Quests WHERE author_id=?";
+
+    public static List<Quest> authorQuests(int authorId) {
         List<Quest> quests = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement st = connection.createStatement()
+             PreparedStatement psAQuests = connection.prepareStatement(GET_QUESTS_BY_AUTHOR)
         ) {
-            ResultSet questSet = st.executeQuery("SELECT * FROM Quests WHERE author_id=" + authorID + ";");
+            psAQuests.setInt(1, authorId);
+            ResultSet questSet = psAQuests.executeQuery();
             quests = getAllQuests(questSet, connection);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -175,6 +192,8 @@ public class DBWorker {
         return quests;
     }
 
+    private static final String GET_AUTHOR_BY_LOGIN = "SELECT * FROM Authors WHERE login=?";
+
     public static Author validate(String login, String pass) {
         if (login == null || pass == null) {
             return null;
@@ -182,9 +201,11 @@ public class DBWorker {
 
         Author author = null;
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement st = connection.createStatement()
+             PreparedStatement psALogin = connection.prepareStatement(GET_AUTHOR_BY_LOGIN);
         ) {
-            ResultSet authors = st.executeQuery("SELECT * FROM Authors WHERE login=\"" + login + "\";");
+            psALogin.setString(1, login);
+            ResultSet authors = psALogin.executeQuery();
+
             while (authors.next()) {
                 int id = authors.getInt("id");
                 String realPass = authors.getString("pass");
@@ -205,12 +226,17 @@ public class DBWorker {
         return author;
     }
 
+    private static final String GET_SITUATION = "SELECT * FROM Situations WHERE quest_id=? AND sit_id=?";
+
     public static Situation getSituation(int questID, int sitID) {
         Situation situation = null;
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement st = connection.createStatement()
+             PreparedStatement psSit = connection.prepareStatement(GET_SITUATION)
         ) {
-            ResultSet situations = st.executeQuery("SELECT * FROM Situations WHERE quest_id=" + questID + " AND sit_id=" + sitID + ";");
+            psSit.setInt(1, questID);
+            psSit.setInt(2, sitID);
+            ResultSet situations = psSit.executeQuery();
+
             while (situations.next()) {
                 String imageURL = situations.getString("img");
                 String smallDescription = situations.getString("small_text");
@@ -241,26 +267,40 @@ public class DBWorker {
         return situation;
     }
 
+    private static final String GET_LIKE_PAIR = "SELECT val FROM Likes WHERE qid=? AND aid=?";
+    private static final String UPDATE_LIKES = "UPDATE Likes SET val=? WHERE qid=? AND aid=?";
+    private static final String INSERT_LIKES = "INSERT INTO Likes (qid, aid, val) VALUES (?, ?, ?)";
+
     public static int  addLike(int qid, int aid, int rate) {
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement addLikeSt = connection.createStatement()
+             PreparedStatement psPLike = connection.prepareStatement(GET_LIKE_PAIR)
         ) {
-            ResultSet questLikes = addLikeSt.executeQuery("SELECT val FROM Likes WHERE qid=" + qid + " AND aid=" + aid + ";");
+            psPLike.setInt(1, qid);
+            psPLike.setInt(2, aid);
+            ResultSet questLikes = psPLike.executeQuery();
+
             if (questLikes.next()) {
                 if (questLikes.getInt("val") == rate) return 0;
 
-                try (Statement insertSt = connection.createStatement()) {
-                    insertSt.executeUpdate("UPDATE Likes SET val=" + rate + " WHERE qid=" + qid + " AND aid=" + aid + ";");
+                try (PreparedStatement psUpdate = connection.prepareStatement(UPDATE_LIKES)) {
+                    psUpdate.setInt(1, rate);
+                    psUpdate.setInt(2, qid);
+                    psUpdate.setInt(3, aid);
+                    psUpdate.executeUpdate();
                 }
             } else {
-                try (Statement insertSt = connection.createStatement()) {
-                    insertSt.executeUpdate("INSERT INTO Likes (qid, aid, val) VALUES (" + qid + ", " + aid + ", " + rate + ");");
+                try (PreparedStatement psInsert = connection.prepareStatement(INSERT_LIKES)) {
+                    psInsert.setInt(1, qid);
+                    psInsert.setInt(2, aid);
+                    psInsert.setInt(3, rate);
+                    psInsert.executeUpdate();
                 }
             }
 
             int totalRate = 0;
-            try (Statement resRateSt = connection.createStatement()) {
-                ResultSet questRate = resRateSt.executeQuery("SELECT val FROM Likes WHERE qid=" + qid + ";");
+            try (PreparedStatement psTotal = connection.prepareStatement(GET_QUEST_LIKES)) {
+                psTotal.setInt(1, qid);
+                ResultSet questRate = psTotal.executeQuery();
                 while (questRate.next()) {
                     totalRate += questRate.getInt("val");
                 }
@@ -273,23 +313,23 @@ public class DBWorker {
         return 0;
     }
 
-    public static boolean addUser(String login, String pass, String mail) {
+    private static final String GET_AUTHOR_BY_LOGIN_OR_EMAIL = "SELECT * FROM Authors WHERE login=? OR email=?";
+    private static final String INSERT_AUTHOR = "INSERT INTO Authors (login, pass, email) VALUES (?, ?, ?)";
+
+    public static boolean addUser(String login, String pass, String email) {
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement getUserSt = connection.createStatement()
+             PreparedStatement psALE = connection.prepareStatement(GET_AUTHOR_BY_LOGIN_OR_EMAIL)
         ) {
-            ResultSet users = getUserSt.executeQuery("SELECT * FROM Authors WHERE login=\"" + login + "\";");
+            psALE.setString(1, login);
+            psALE.setString(2, email);
+            ResultSet users = psALE.executeQuery();
+
             if (!users.next()) {
-
-                try (Statement emailSt = connection.createStatement()) {
-                    ResultSet emails = emailSt.executeQuery("SELECT * FROM Authors WHERE email=\"" + mail + "\";");
-                    if (emails.next()) {
-                        return false;
-                    }
-                }
-
-                try (Statement insertSt = connection.createStatement()) {
-                    insertSt.executeUpdate("INSERT INTO Authors (login, pass, email) " +
-                            "VALUES (\"" + login + "\", \"" + pass + "\", \"" + mail + "\");");
+                try (PreparedStatement psInsert = connection.prepareStatement(INSERT_AUTHOR)) {
+                    psInsert.setString(1, login);
+                    psInsert.setString(2, pass);
+                    psInsert.setString(3, email);
+                    psInsert.executeUpdate();
                     return true;
                 }
             }
@@ -299,12 +339,14 @@ public class DBWorker {
         return false;
     }
 
+    private static final String SORTED_AUTHORS = "SELECT * FROM Authors ORDER BY login";
+
     public static List<Author> getAllAuthors() {
         List<Author> authors = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement getAuthorsSt = connection.createStatement()
+             PreparedStatement psASorted = connection.prepareStatement(SORTED_AUTHORS)
         ) {
-            ResultSet allAuthors = getAuthorsSt.executeQuery("SELECT * FROM Authors ORDER BY login");
+            ResultSet allAuthors = psASorted.executeQuery();
 
             while (allAuthors.next()) {
                 int id = allAuthors.getInt("id");
@@ -322,25 +364,20 @@ public class DBWorker {
         return  authors;
     }
 
+    private static final String GET_POPULAR_QUESTS =
+        "SELECT * FROM ((SELECT " +
+          "QuestLikes.id, QuestLikes.name, QuestLikes.author_id, QuestLikes.universe_id, " +
+          "QuestLikes.category_id, QuestLikes.characters, QuestLikes.description, QuestLikes.img_url, QuestLikes.creation_date, " +
+          "sum(QuestLikes.val) AS LikesNum " +
+        "FROM ((SELECT * FROM Quests LEFT JOIN Likes ON Quests.id=Likes.qid) AS QuestLikes)" +
+        "GROUP BY id ) AS GQuests) ORDER BY CASE WHEN (GQuests.LikesNum IS NULL) THEN 0 ELSE GQuests.LikesNum END DESC";
+
     public static List<Quest> getPopularQuests() {
         List<Quest> quests = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement getQuestsSt = connection.createStatement()
+             PreparedStatement psPop = connection.prepareStatement(GET_POPULAR_QUESTS)
         ) {
-            ResultSet popQuests = getQuestsSt.executeQuery(
-                "SELECT " +
-                  "QuestLikes.id, QuestLikes.name, QuestLikes.author_id, QuestLikes.universe_id, " +
-                  "QuestLikes.category_id, QuestLikes.characters, QuestLikes.description, QuestLikes.img_url, QuestLikes.creation_date, " +
-                  "sum(QuestLikes.val) AS LikesNum " +
-                "FROM ((SELECT * FROM " +
-                "    Quests " +
-                "  LEFT JOIN " +
-                "    Likes " +
-                "  ON Quests.id=Likes.qid) AS QuestLikes) " +
-                "  GROUP BY " +
-                "    id " +
-                "  ORDER BY LikesNum DESC;"
-            );
+            ResultSet popQuests = psPop.executeQuery();
             quests = getAllQuests(popQuests, connection);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -348,11 +385,15 @@ public class DBWorker {
         return quests;
     }
 
+    private static final String UPDATE_AVATAR = "UPDATE Authors SET avatar_url=? WHERE id=?";
+
     public static void updateUserAvatar(int authorId, String avatarURL) {
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             Statement updateAuthorAvaSt = connection.createStatement()
+             PreparedStatement psUpdate = connection.prepareStatement(UPDATE_AVATAR)
         ) {
-            updateAuthorAvaSt.executeUpdate("UPDATE Authors SET avatar_url=\"" + avatarURL + "\" WHERE id=" + authorId + ";");
+            psUpdate.setString(1, avatarURL);
+            psUpdate.setInt(2, authorId);
+            psUpdate.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
