@@ -201,7 +201,7 @@ public class DBWorker {
 
         Author author = null;
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             PreparedStatement psALogin = connection.prepareStatement(GET_AUTHOR_BY_LOGIN);
+             PreparedStatement psALogin = connection.prepareStatement(GET_AUTHOR_BY_LOGIN)
         ) {
             psALogin.setString(1, login);
             ResultSet authors = psALogin.executeQuery();
