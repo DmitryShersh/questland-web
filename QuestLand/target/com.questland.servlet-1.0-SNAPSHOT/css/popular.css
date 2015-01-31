@@ -57,7 +57,7 @@
 	text-align: left;
 	color: #33f;
 	text-shadow: -2px 2px 2px black;
-	line-height: 100%;
+	line-height: 80%;
 	padding-bottom: 2px;
 	padding-top: 1%;
 	padding-left: 2%;
@@ -68,8 +68,9 @@
 	text-align: left;
 	color: #33f;
 	line-height: 120%;
-	margin-top: -2%;
+	margin-top: -4%;
 	padding-left: 2%;
+	vertical-align: top;
 }
 
 .Txt_qland {
@@ -119,6 +120,15 @@
 	color: #2659ff;
 	padding-bottom: -1%;
 	padding-top: 1%;
+}
+
+.Txt_mark {
+	font-family: 'Hobo Std', Arial, Helvetica, sans-serif;
+	font-size: 200%;
+	color: #2659ff;
+	text-shadow: 5px 2px 3px black;
+	line-height: 100%;
+	padding-right: 10px;
 }
 
 a {

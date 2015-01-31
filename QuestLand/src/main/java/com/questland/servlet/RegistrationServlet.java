@@ -19,7 +19,7 @@ public class RegistrationServlet extends HttpServlet {
     {
         String type = request.getParameter("type");
         if (type == null || !type.equals("reg")) {
-            System.out.println("Wrong type");
+            System.out.println("Wrong register type");
             return;
         }
 

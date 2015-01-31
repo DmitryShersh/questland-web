@@ -135,6 +135,7 @@ function addQuestChild(quest) { // creating quest table
     var univColors = ["#00b200", "#0000b2", "#ff4d4d", "#a64dff"];
     var universeCell = infoRow.insertCell(0);
     universeCell.setAttribute("style", "width: 6%;");
+    universeCell.setAttribute("rowspan", "2");
     var universeDiv = document.createElement("div");
     universeDiv.setAttribute("style", "background-color: " + univColors[quest.universeID - 1]);
     universeDiv.setAttribute("class", "quest_univ");
@@ -146,13 +147,19 @@ function addQuestChild(quest) { // creating quest table
 
     var imageCell = infoRow.insertCell(1);
     imageCell.setAttribute("style", "width: 30%; text-align: center;");
+    imageCell.setAttribute("rowspan", "2");
     var questImage = document.createElement("img");
     questImage.setAttribute("class", "main_pict");
     questImage.setAttribute("src", "/images/" + (quest.imageURL ? "quest/" + quest.imageURL : "none.png"));
     questImage.setAttribute("alt", "quest image");
     imageCell.appendChild(questImage);
 
-    var textCell = infoRow.insertCell(2);
+    var questBodyCell = infoRow.insertCell(2);
+    var questBodyTable = document.createElement("table");
+    questBodyTable.setAttribute("style", "width: 100%; height: 100%;");
+    var headerRow = questBodyTable.insertRow(0);
+    headerRow.setAttribute("style", "height: 30px;");
+    var nameCell = headerRow.insertCell(0);
     var questNameDiv = document.createElement("div");
     questNameDiv.setAttribute("class", "Txt_quest");
 
@@ -161,9 +168,18 @@ function addQuestChild(quest) { // creating quest table
     questHref.innerHTML = quest.name;
 
     questNameDiv.appendChild(questHref);
-    textCell.appendChild(questNameDiv);
-    textCell.appendChild(document.createElement("br"));
+    nameCell.appendChild(questNameDiv);
 
+    var rateCell = headerRow.insertCell(1);
+    rateCell.setAttribute("style", "width: 15%;");
+    var rateDiv = document.createElement("div");
+    rateDiv.setAttribute("class", "Txt_mark");
+    rateDiv.innerHTML = (quest.rate > 0 ? '+' : '') + quest.rate;
+    rateCell.appendChild(rateDiv);
+
+    var descRow = questBodyTable.insertRow(1);
+    var descCell = descRow.insertCell(0);
+    descCell.setAttribute("colspan", 2);
     var questDescDiv = document.createElement("div");
     questDescDiv.setAttribute("class", "Txt_quest_author");
 
@@ -173,10 +189,11 @@ function addQuestChild(quest) { // creating quest table
 
     questDescDiv.innerHTML
         = "Автор: " + authorHref.outerHTML + "<br>"
-    + "Категория: " + quest.category + "<br>"
-    + "Жанр: " + quest.genre
-    + (("description" in quest) ? ("<br>" + "Описание: " + ellipsize(quest.description, 30)) : "");
-    textCell.appendChild(questDescDiv);
+        + "Категория: " + quest.category + "<br>"
+        + "Жанр: " + quest.genre
+        + (("description" in quest) ? ("<br>" + "Описание: " + ellipsize(quest.description, 30)) : "");
+    descCell.appendChild(questDescDiv);
+    questBodyCell.appendChild(questBodyTable);
 
     var questDiv = document.createElement("div");
     questDiv.setAttribute("class", "quest_block");

@@ -55,71 +55,29 @@
       <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="3708">
-              <caret line="73" column="47" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2203" max-vertical-offset="4014">
+              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Quest.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/Quest.htm">
+      <file leaf-file-name="author.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/author.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="52.666668" vertical-offset="3186" max-vertical-offset="4464">
-              <caret line="98" column="128" selection-start-line="98" selection-start-column="128" selection-end-line="98" selection-end-column="128" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#2;n#tr#2;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBWorker.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/db/DBWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59045225" vertical-offset="4877" max-vertical-offset="7218">
-              <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
-              <folding>
-                <marker date="1422552219216" expanded="true" signature="644:676" placeholder="SELECT * FRO..Authors..." />
-                <marker date="1422552219216" expanded="true" signature="733:770" placeholder="SELECT name ..Universes..." />
-                <marker date="1422552219216" expanded="true" signature="827:865" placeholder="SELECT name ..Categories..." />
-                <marker date="1422552219216" expanded="true" signature="921:970" placeholder="SELECT genre..QuestGenres..." />
-                <marker date="1422552219216" expanded="true" signature="1024:1057" placeholder="SELECT val F..Likes..." />
-                <marker date="1422552219216" expanded="true" signature="2846:2875" placeholder="SELECT name ..Genres..." />
-                <marker date="1422552219216" expanded="true" signature="4587:4663" placeholder="SELECT * FRO..Quests..." />
-                <marker date="1422552219216" expanded="true" signature="6268:6299" placeholder="SELECT * FRO..Quests..." />
-                <marker date="1422552219216" expanded="true" signature="6909:6947" placeholder="SELECT * FRO..Quests..." />
-                <marker date="1422552219216" expanded="true" signature="7574:7609" placeholder="SELECT * FRO..Authors..." />
-                <marker date="1422552219216" expanded="true" signature="8771:8825" placeholder="SELECT * FRO..Situations..." />
-                <marker date="1422552219216" expanded="true" signature="10437:10480" placeholder="SELECT val F..Likes..." />
-                <marker date="1422552219216" expanded="true" signature="10531:10575" placeholder="UPDATE Likes..." />
-                <marker date="1422552219216" expanded="true" signature="10626:10676" placeholder="INSERT INTO ..." />
-                <marker date="1422552219216" expanded="true" signature="12375:12421" placeholder="SELECT * FRO..Authors..." />
-                <marker date="1422552219216" expanded="true" signature="12473:12530" placeholder="INSERT INTO ..." />
-                <marker date="1422552219216" expanded="true" signature="13485:13521" placeholder="SELECT * FRO..Authors..." />
-                <marker date="1422552219216" expanded="true" signature="14584:14982" placeholder="SELECT Quest..*..." />
-                <marker date="1422552219216" expanded="true" signature="14584:15080" placeholder="SELECT Quest..*..." />
-                <marker date="1422552219216" expanded="true" signature="14584:15083" placeholder="SELECT Quest..*..." />
-                <marker date="1422552219216" expanded="true" signature="14883:14942" placeholder="SELECT * FRO..Quests..." />
-                <marker date="1422552219216" expanded="true" signature="14883:14962" placeholder="SELECT * FRO..Quests..." />
-                <marker date="1422552219216" expanded="true" signature="15641:15683" placeholder="UPDATE Autho..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quest_schema.Likes" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/a37d36d7/84667f6e-ccc7-4cb4-bb38-59f7955ad43b/quest_schema..Likes">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5711974" vertical-offset="1717" max-vertical-offset="3006">
+              <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        </entry>
+      </file>
+      <file leaf-file-name="popular.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/popular.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1992" max-vertical-offset="2682">
+              <caret line="131" column="1" selection-start-line="124" selection-start-column="0" selection-end-line="131" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,16 +102,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/questland/pojo/Author.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/questland/servlet/QuestGoServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/questland/pojo/Quest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/questland/servlet/RegistrationServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/popular.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/main.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/questland/servlet/QuestServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/author.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/authors.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/quest.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/rules.css" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/questland/servlet/UploadServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/questland/servlet/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Main.htm" />
         <option value="$PROJECT_DIR$/src/main/webapp/Rules.htm" />
@@ -162,10 +116,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/questland/servlet/AuthorServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Popular.htm" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/questgo.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/Questgo.htm" />
         <option value="$PROJECT_DIR$/src/main/webapp/Quest.htm" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/utils.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/questland/db/DBWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Questgo.htm" />
+        <option value="$PROJECT_DIR$/src/main/java/com/questland/servlet/UploadServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/questland/servlet/RegistrationServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/popular.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/utils.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/author.css" />
       </list>
     </option>
   </component>
@@ -245,6 +203,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,6 +281,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuestLand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuestLand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -462,7 +447,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -881,16 +865,17 @@
       <workItem from="1422400105084" duration="867000" />
       <workItem from="1422452577128" duration="23328000" />
       <workItem from="1422484939167" duration="2175000" />
-      <workItem from="1422539134091" duration="8354000" />
+      <workItem from="1422539134091" duration="10606000" />
+      <workItem from="1422710515588" duration="6353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281150000" />
+    <option name="totallyTimeSpent" value="289755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="-4" width="1305" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -902,9 +887,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31944445" sideWeight="0.50039715" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17156473" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17156473" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31944445" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31944445" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24146147" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -972,14 +957,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/questland/servlet/AuthorServlet.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
@@ -1070,14 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/QuestGoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/a37d36d7/84667f6e-ccc7-4cb4-bb38-59f7955ad43b/quest_schema..QuestGenres">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
@@ -1117,16 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/RegistrationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="810">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/a37d36d7/84667f6e-ccc7-4cb4-bb38-59f7955ad43b/quest_schema..Situations">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
@@ -1139,45 +1098,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/rules.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75728154" vertical-offset="378" max-vertical-offset="1530">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/quest.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27184466" vertical-offset="1164" max-vertical-offset="3114">
-          <caret line="74" column="1" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/authors.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7669903" vertical-offset="372" max-vertical-offset="1530">
           <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/author.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62459546" vertical-offset="1126" max-vertical-offset="2826">
-          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/popular.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62459546" vertical-offset="1126" max-vertical-offset="2502">
-          <caret line="84" column="1" selection-start-line="74" selection-start-column="0" selection-end-line="84" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/pojo/Quest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="1494">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1210,28 +1134,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/ImageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32038835" vertical-offset="0" max-vertical-offset="900">
-          <caret line="17" column="82" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.1/commons-fileupload-1.3.1.jar!/org/apache/commons/fileupload/FileItem.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.69814503" vertical-offset="0" max-vertical-offset="774">
           <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/UploadServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70247936" vertical-offset="655" max-vertical-offset="1260">
-          <caret line="60" column="73" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1254,7 +1160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.116504855" vertical-offset="0" max-vertical-offset="738">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,36 +1174,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.333333" vertical-offset="2322" max-vertical-offset="3006">
           <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/AuthorServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1548">
-          <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Author.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="101.37037" vertical-offset="3835" max-vertical-offset="5868">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#3;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Popular.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-70.74074" vertical-offset="88" max-vertical-offset="5040">
-          <caret line="112" column="64" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#3;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#4;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1327,37 +1202,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Questgo.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30622837" vertical-offset="2811" max-vertical-offset="5364">
-          <caret line="166" column="81" selection-start-line="166" selection-start-column="81" selection-end-line="166" selection-end-column="81" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#0;n#tr#3;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#3;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#5;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/QuestServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456" vertical-offset="102" max-vertical-offset="1080">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/AutoCloseable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.78640777" vertical-offset="0" max-vertical-offset="1458">
           <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1365,7 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3322314" vertical-offset="141" max-vertical-offset="24354">
           <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,7 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3322314" vertical-offset="10455" max-vertical-offset="12402">
           <caret line="631" column="30" selection-start-line="631" selection-start-column="30" selection-end-line="631" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,7 +1227,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7449" max-vertical-offset="23400">
           <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/db/DBWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38842976" vertical-offset="4877" max-vertical-offset="7218">
+          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding>
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Authors..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT name ..Universes..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT name ..Categories..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT genre..QuestGenres..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT val F..Likes..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT name ..Genres..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Quests..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Quests..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Quests..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Authors..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Situations..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT val F..Likes..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="UPDATE Likes..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Authors..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Authors..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT Quest..*..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT Quest..*..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT Quest..*..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Quests..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Quests..." />
+            <marker date="1422552219216" expanded="true" signature="-1:-1" placeholder="UPDATE Autho..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Questgo.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25951558" vertical-offset="1596" max-vertical-offset="5346">
+          <caret line="97" column="57" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#4;n#table#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1398,14 +1285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="3708">
-          <caret line="73" column="47" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/a37d36d7/84667f6e-ccc7-4cb4-bb38-59f7955ad43b/quest_schema..Likes">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
@@ -1419,46 +1298,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/pojo/Quest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="1494">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Author.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.7906575" vertical-offset="5023" max-vertical-offset="5868">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/UploadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="1242">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/AuthorServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1548">
+          <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/QuestServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/QuestGoServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.13592233" vertical-offset="282" max-vertical-offset="900">
+          <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/servlet/RegistrationServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30097088" vertical-offset="66" max-vertical-offset="684">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Quest.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="52.666668" vertical-offset="3186" max-vertical-offset="4464">
-          <caret line="98" column="128" selection-start-line="98" selection-start-column="128" selection-end-line="98" selection-end-column="128" />
+        <state vertical-scroll-proportion="0.5605536" vertical-offset="3240" max-vertical-offset="4464">
+          <caret line="199" column="94" selection-start-line="199" selection-start-column="53" selection-end-line="199" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Popular.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.24567474" vertical-offset="2734" max-vertical-offset="5040">
+          <caret line="145" column="39" selection-start-line="145" selection-start-column="39" selection-end-line="145" selection-end-column="39" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#2;n#tr#2;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#td#0;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#td#0;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/questland/db/DBWorker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/rules.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59045225" vertical-offset="4877" max-vertical-offset="7218">
-          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
-          <folding>
-            <marker date="1422552219216" expanded="true" signature="644:676" placeholder="SELECT * FRO..Authors..." />
-            <marker date="1422552219216" expanded="true" signature="733:770" placeholder="SELECT name ..Universes..." />
-            <marker date="1422552219216" expanded="true" signature="827:865" placeholder="SELECT name ..Categories..." />
-            <marker date="1422552219216" expanded="true" signature="921:970" placeholder="SELECT genre..QuestGenres..." />
-            <marker date="1422552219216" expanded="true" signature="1024:1057" placeholder="SELECT val F..Likes..." />
-            <marker date="1422552219216" expanded="true" signature="2846:2875" placeholder="SELECT name ..Genres..." />
-            <marker date="1422552219216" expanded="true" signature="4587:4663" placeholder="SELECT * FRO..Quests..." />
-            <marker date="1422552219216" expanded="true" signature="6268:6299" placeholder="SELECT * FRO..Quests..." />
-            <marker date="1422552219216" expanded="true" signature="6909:6947" placeholder="SELECT * FRO..Quests..." />
-            <marker date="1422552219216" expanded="true" signature="7574:7609" placeholder="SELECT * FRO..Authors..." />
-            <marker date="1422552219216" expanded="true" signature="8771:8825" placeholder="SELECT * FRO..Situations..." />
-            <marker date="1422552219216" expanded="true" signature="10437:10480" placeholder="SELECT val F..Likes..." />
-            <marker date="1422552219216" expanded="true" signature="10531:10575" placeholder="UPDATE Likes..." />
-            <marker date="1422552219216" expanded="true" signature="10626:10676" placeholder="INSERT INTO ..." />
-            <marker date="1422552219216" expanded="true" signature="12375:12421" placeholder="SELECT * FRO..Authors..." />
-            <marker date="1422552219216" expanded="true" signature="12473:12530" placeholder="INSERT INTO ..." />
-            <marker date="1422552219216" expanded="true" signature="13485:13521" placeholder="SELECT * FRO..Authors..." />
-            <marker date="1422552219216" expanded="true" signature="14584:14982" placeholder="SELECT Quest..*..." />
-            <marker date="1422552219216" expanded="true" signature="14584:15080" placeholder="SELECT Quest..*..." />
-            <marker date="1422552219216" expanded="true" signature="14584:15083" placeholder="SELECT Quest..*..." />
-            <marker date="1422552219216" expanded="true" signature="14883:14942" placeholder="SELECT * FRO..Quests..." />
-            <marker date="1422552219216" expanded="true" signature="14883:14962" placeholder="SELECT * FRO..Quests..." />
-            <marker date="1422552219216" expanded="true" signature="15641:15683" placeholder="UPDATE Autho..." />
-          </folding>
+        <state vertical-scroll-proportion="0.79611653" vertical-offset="912" max-vertical-offset="1530">
+          <caret line="78" column="1" selection-start-line="68" selection-start-column="0" selection-end-line="78" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2203" max-vertical-offset="4014">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/quest.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.8349514" vertical-offset="1038" max-vertical-offset="3114">
+          <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/popular.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1992" max-vertical-offset="2682">
+          <caret line="131" column="1" selection-start-line="124" selection-start-column="0" selection-end-line="131" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/author.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5711974" vertical-offset="1717" max-vertical-offset="3006">
+          <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

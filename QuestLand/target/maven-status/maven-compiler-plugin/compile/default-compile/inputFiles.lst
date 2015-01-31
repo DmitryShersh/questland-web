@@ -6,7 +6,6 @@
 /home/fenx/programming/Web/QuestLand/src/main/java/com/questland/db/DBWorker.java
 /home/fenx/programming/Web/QuestLand/src/main/java/com/questland/servlet/RegistrationServlet.java
 /home/fenx/programming/Web/QuestLand/src/main/java/com/questland/pojo/Quest.java
-/home/fenx/programming/Web/QuestLand/src/main/java/com/questland/servlet/ImageServlet.java
 /home/fenx/programming/Web/QuestLand/src/main/java/com/questland/servlet/LoginServlet.java
 /home/fenx/programming/Web/QuestLand/src/main/java/com/questland/servlet/QuestGoServlet.java
 /home/fenx/programming/Web/QuestLand/src/main/java/com/questland/pojo/Author.java

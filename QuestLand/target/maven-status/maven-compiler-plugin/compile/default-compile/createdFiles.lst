@@ -4,7 +4,6 @@ com/questland/servlet/UploadServlet.class
 com/questland/db/DBWorker.class
 com/questland/pojo/Author.class
 com/questland/servlet/MainServlet.class
-com/questland/servlet/ImageServlet.class
 com/questland/pojo/Quest.class
 com/questland/servlet/AuthorServlet.class
 com/questland/servlet/QuestGoServlet.class
