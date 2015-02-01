@@ -258,7 +258,11 @@
 			rb.setAttribute("type", "radio");
 			rb.setAttribute("name", "group1");
 			rb.setAttribute("value", (i + 1).toString());
-			rbDiv.innerHTML = rb.outerHTML + " " + situation.choices[i];
+			var rbLabel = document.createElement("label");
+			rbLabel.setAttribute("for", "rb" + (i + 1));
+			rbLabel.innerHTML = situation.choices[i];
+			rbDiv.appendChild(rb);
+			rbDiv.appendChild(rbLabel);
 			rbCell.appendChild(rbDiv);
 		}
 

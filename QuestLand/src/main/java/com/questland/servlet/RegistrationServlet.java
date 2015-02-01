@@ -28,9 +28,9 @@ public class RegistrationServlet extends HttpServlet {
         String email = request.getParameter("email");
 
         JSONObject resp = new JSONObject();
-        boolean added = DBWorker.addUser(login, pass, email);
+        String added = DBWorker.addUser(login, pass, email);
         System.out.println(added);
-        resp.put("ok", added);
+        resp.put("res", added);
 
         ServletOutputStream out = response.getOutputStream();
         out.write(resp.toString().getBytes("UTF-8"));

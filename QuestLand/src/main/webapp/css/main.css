@@ -87,6 +87,16 @@
 	border-left: 0;
 }
 
+.Txt_red_mess {
+    font-family: 'Minion Pro', Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    text-align: left;
+    color: #ff4d4d;
+    line-height: 100%;
+    padding-left: 5px;
+    display: none;
+}
+
 a {
 	text-decoration: none;
 }

@@ -19,7 +19,7 @@ public class MainServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        if (request.getParameter("type").equals("init")) {
+        if (!request.getParameter("type").equals("init")) {
             System.out.println("not init :(");
             return;
         }

@@ -316,7 +316,7 @@ public class DBWorker {
     private static final String GET_AUTHOR_BY_LOGIN_OR_EMAIL = "SELECT * FROM Authors WHERE login=? OR email=?";
     private static final String INSERT_AUTHOR = "INSERT INTO Authors (login, pass, email) VALUES (?, ?, ?)";
 
-    public static boolean addUser(String login, String pass, String email) {
+    public static String addUser(String login, String pass, String email) {
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
              PreparedStatement psALE = connection.prepareStatement(GET_AUTHOR_BY_LOGIN_OR_EMAIL)
         ) {
@@ -330,13 +330,20 @@ public class DBWorker {
                     psInsert.setString(2, pass);
                     psInsert.setString(3, email);
                     psInsert.executeUpdate();
-                    return true;
+                    return "ok";
+                }
+            } else {
+                String fetchedLogin = users.getString("login");
+                if (fetchedLogin.equals(login)) {
+                    return "err_login";
+                } else { // wrong email
+                    return "err_mail";
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return "err_nok";
     }
 
     private static final String SORTED_AUTHORS = "SELECT * FROM Authors ORDER BY login";

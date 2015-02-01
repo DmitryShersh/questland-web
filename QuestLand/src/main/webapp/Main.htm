@@ -376,40 +376,47 @@
 	}
 
 	function sendReg() {
+        $("#err_email").css("display", "none");
+        $("#err_login").css("display", "none");
+        $("#err_pass").css("display", "none");
+        $("#err_repPass").css("display", "none");
+
+		var mail = document.getElementById("regMail").value;
+		var login = document.getElementById("regLogin").value;
 		var pass = document.getElementById("regPass").value;
 		var repPass = document.getElementById("regRepPass").value;
-		if (pass != repPass) {
-			console.log("not equal passwords");
-			return;
+
+		if (!mail.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/g)) {
+            document.getElementById("err_email").innerHTML = "некорректный e-mail";
+            $("#err_email").css("display", "inline");
+        } else if (!login.match(/^[A-Za-z_0-9]+$/g)) {
+            document.getElementById("err_login").innerHTML = "некорректный логин";
+            $("#err_login").css("display", "inline");
+        } else if (!pass.match(/^[A-Za-z_0-9]+$/g))
+            $("#err_pass").css("display", "inline");
+		else if (pass != repPass)
+            $("#err_repPass").css("display", "inline");
+		else {
+			$.ajax({
+				type: "POST",
+				url: '/register',
+				dataType: 'json',
+				data: { type: 'reg', name: login, passwd: pass, email: mail }
+			}).done(function(servResp) {
+				if (servResp.res == "ok") {
+					closeReg();
+				} else {
+					if (servResp.res == "err_mail") {
+                        document.getElementById("err_email").innerHTML = "e-mail занят";
+                        $("#err_email").css("display", "inline");
+                    } else if (servResp.res == "err_login") {
+                        document.getElementById("err_login").innerHTML = "логин занят";
+                        $("#err_login").css("display", "inline");
+                    } else
+                        console.log("uknown error");
+				}
+			});
 		}
-
-		var login = document.getElementById("regLogin").value;
-		var mail = document.getElementById("regMail").value;
-
-		if (!login || !mail || !pass || !repPass ||
-			!login.match(/^[A-Za-z_0-9]+$/g) ||
-			!pass.match(/^[A-Za-z_0-9]+$/g) ||
-			!mail.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/g))
-		{
-			console.log("login: " + login.match(/^[A-Za-z_0-9]+$/g));
-			console.log("pass: " + pass.match(/^[A-Za-z_0-9]+$/g));
-			console.log("wrong datas");
-			return;
-		}
-
-		$.ajax({
-			type: "POST",
-			url: '/register',
-			dataType: 'json',
-			data: { type: 'reg', name: login, passwd: pass, email: mail }
-		}).done(function(servResp) {
-			if (servResp.ok) {
-				console.log("ok reg");
-				closeReg();
-			} else {
-				console.log("not ok");
-			}
-		});
 	}
 </script>
 
@@ -435,19 +442,35 @@
 		<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff; margin-top: -5%;">
 			Почтовый ящик:
 		</div>
-		<input id="regMail" type="text" name="regMail" style="width: 43%; height: 25px;"> </br>
+		<input id="regMail" type="text" name="regMail" style="width: 43%; height: 25px;">
+        <span id="err_email" class="Txt_red_mess">
+            некорректный e-mail
+        </span>
+        </br>
 		<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff;">
 			Логин:
 		</div>
-		<input id="regLogin" type="text" name="regLogin" style="width: 43%; height: 25px;"> </br>
+		<input id="regLogin" type="text" name="regLogin" style="width: 43%; height: 25px;">
+        <span id="err_login" class="Txt_red_mess">
+            некорректный логин
+        </span>
+        </br>
 		<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff;">
 			Пароль:
 		</div>
-		<input id="regPass" type="password" name="regPasswd" style="width: 43%; height: 25px;"></br>
+		<input id="regPass" type="password" name="regPasswd" style="width: 43%; height: 25px;">
+        <span id="err_pass" class="Txt_red_mess">
+            некорректный пароль
+        </span>
+        </br>
 		<div style="font-family: 'Hobo', Arial, Helvetica, sans-serif; font-size: 180%; color: #2659ff;">
 			Повторить пароль:
 		</div>
-		<input id="regRepPass" type="password" name="regRepeatPasswd" style="width: 43%; height: 25px;"></br>
+		<input id="regRepPass" type="password" name="regRepeatPasswd" style="width: 43%; height: 25px;">
+        <span id="err_repPass" class="Txt_red_mess">
+            пароли не совпадают
+        </span>
+        </br>
 		<input type="button" name="reg" onclick="sendReg()" value="Зарегистрироваться" style="width: 60%; height: 40px; margin-top: 5%; font-size: 22px; color: #2659ff; background-color: #fff;">
 	</div>
 </div>
