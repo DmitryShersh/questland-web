@@ -15,6 +15,14 @@ import java.util.List;
 @WebServlet(name = "QuestDBRequest", urlPatterns = {"/main"})
 public class MainServlet extends HttpServlet {
 
+    /*@Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException
+    {
+        response.setHeader("Cache-Control", "max-age=259200");
+        response.setHeader("Expires", "Mon, 26 Jul 1997 05:00:00 GMT");
+    }*/
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException

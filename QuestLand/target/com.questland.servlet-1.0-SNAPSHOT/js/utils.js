@@ -31,6 +31,7 @@ function validateLogin(extraParams) {
         if (extraParams && "questGoExit" in extraParams) {
             window.location = window.location.protocol + "//" + window.location.host + "/quest/" + url2id();
         } else {
+            user.extraParams = extraParams || {};
             clearUserWindows();
         }
     }
@@ -57,9 +58,6 @@ function initUser() {
 
     // working with extra params
     if (!user.extraParams) return;
-    if ("loginForm" in user.extraParams) {
-        document.getElementById("loginForm").setAttribute("style", "margin-left: 5%; display: none;");
-    }
     if ("avatar" in user.extraParams) {
         if (!user.avatarURL && url2id() == user.id) {
             $("#Ava").css("display", "none");
@@ -85,6 +83,9 @@ function clearUserWindows() {
 
     // working with extra params
     if (!user.extraParams) return;
+    if ("loginForm" in user.extraParams) {
+        document.getElementById("loginForm").setAttribute("style", "margin-left: 5%;");
+    }
     if ("loginForm" in user.extraParams) {
         document.getElementById("loginForm").setAttribute("style", "margin-left: 5%;");
     }
